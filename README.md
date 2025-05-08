@@ -1,1 +1,3 @@
 # todogo
+
+todo cli projekciuks
