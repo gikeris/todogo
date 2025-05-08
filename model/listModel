@@ -1,0 +1,23 @@
+package main
+
+import "time"
+
+type Todos []Todo
+
+type Todo struct {
+	Title       string
+	Completed   bool
+	CreatedAt   time.Time
+	CompletedAt *time.Time
+}
+
+func (todos *Todo) Add(title string) {
+	todo := Todo{
+		Title:       title,
+		Completed:   false,
+		CompletedAt: nil,
+		CreatedAt:   time.Now(),
+	}
+
+	*todos = append(*todo, todo)
+}
